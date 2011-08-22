@@ -91,7 +91,8 @@ let g:session_autosave=1
 
 set bsdir=current
 
-let g:SuperTabDefaultCompletionType = "context"
+set listchars=tab:>-,trail:-,nbsp:-
+set list
 
 """"""""""""""""""""""""""""""""""""""""""""""
 " Some useful mappings
@@ -205,6 +206,8 @@ autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
 \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 let python_highlight_all=1
 autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+
+" GoLang
 
 
 "VALA
