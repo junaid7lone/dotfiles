@@ -7,7 +7,7 @@ call pathogen#helptags()
 set enc=utf-8
 
 "GUI Font
-let &guifont="monospace"
+let &guifont="ubuntu mono 11"
 
 set guioptions-=T  "remove toolbar
 
@@ -232,12 +232,36 @@ let vala_no_tab_space_error = 1
 " Minimum lines used for comment syncing (default 50)
 "let vala_minlines = 120
 
+fun! SelectHTML()
+  let n = 1
+  while n < 50 && n < line("$")
+    " check for jinja
+    if getline(n) =~ '{%\s*\(extends\|block\|macro\|set\|if\|for\|include\|trans\)\>'
+      set ft=htmljinja
+      return
+    endif
+    " check for mako
+    if getline(n) =~ '<%\(def\|inherit\)'
+      set ft=mako
+      return
+    endif
+    " check for genshi
+    if getline(n) =~ 'xmlns:py\|py:\(match\|for\|if\|def\|strip\|xmlns\)'
+      set ft=genshi
+      return
+    endif
+    let n = n + 1
+  endwhile
+  " go with html
+  set ft=html
+endfun
+
 autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd BufNewFile,BufRead *.rhtml setlocal ft=eruby
 autocmd BufNewFile,BufRead *.mako setlocal ft=mako
 autocmd BufNewFile,BufRead *.tmpl setlocal ft=htmljinja
 autocmd BufNewFile,BufRead *.py_tmpl setlocal ft=python
-autocmd BufNewFile,BufRead *.html,*.htm  call SelectHTML()
+"autocmd BufNewFile,BufRead *.html,*.htm  call SelectHTML()
 let html_no_rendering=1
 
 autocmd FileType html,htmldjango,htmljinja,eruby,mako let b:closetag_html_style=1

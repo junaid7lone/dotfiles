@@ -1,5 +1,5 @@
 " ~/tools/dotfiles/vim/sessions/blog.vim: Vim session script.
-" Created by session.vim 1.4.9 on 15 August 2011 at 13:42:09.
+" Created by session.vim 1.4.9 on 28 August 2011 at 01:50:48.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLt
@@ -21,15 +21,18 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
+badd +0 store/blog/gmailwatcher-rewrite
+badd +0 content_types.py
+badd +0 views.py
 silent! argdel *
 set lines=41 columns=159
+edit store/blog/gmailwatcher-rewrite
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
-enew
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -38,7 +41,58 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-tabnext 1
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+tabedit content_types.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 3 - ((2 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+3
+normal! 0
+tabedit views.py
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 80 - ((17 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+80
+normal! 0
+tabnext 3
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -51,7 +105,7 @@ endif
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 unlet SessionLoad
-tabnext 1
+tabnext 3
 1wincmd w
 
 " vim: ft=vim ro nowrap smc=128

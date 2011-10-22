@@ -4,6 +4,7 @@
 
 export PATH=$PATH:/home/owais/bin/texlive/2010/bin/x86_64-linux
 export GOROOT="/usr/lib/go"
+export GOPATH=$HOME/lib/go
 
 DEBEMAIL=hello@owaislone.org
 DEBFULLNAME="Owais Lone"
