@@ -290,3 +290,9 @@ autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 " ----------
 autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
 let javascript_enable_domhtmlcss=1
+
+
+"Python-Mode
+"
+let pymode_rope_vim_completion=1
+let pymode_rope_extended_complete=1
