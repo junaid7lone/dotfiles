@@ -82,7 +82,7 @@ fi
 VCPROMPT_EXECUTABLE=~/bin/vcprompt
 
 linbook_vcprompt() {
-  $VCPROMPT_EXECUTABLE -f $'on \e[0;44m%s\e[00;41m%m%u\e[m: \e[34m%b'
+  $VCPROMPT_EXECUTABLE -f $'on \e[31m%s\e[00;41m%m%u\e[m: \e[00m%b'
 
 }
 export BASEPROMPT='\n\e${USER_COLOR}\u \
