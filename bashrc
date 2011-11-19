@@ -81,17 +81,16 @@ else
 fi
 VCPROMPT_EXECUTABLE=~/bin/vcprompt
 
-mitsuhikos_vcprompt() {
-  $VCPROMPT_EXECUTABLE -f $' on \033[34m%n\033[00m:\033[00m%[unknown]b\033[32m%m%u'
+linbook_vcprompt() {
+  $VCPROMPT_EXECUTABLE -f $'on \e[0;44m%s\e[00;41m%m%u\e[m: \e[34m%b'
+
 }
 export BASEPROMPT='\n\e${USER_COLOR}\u \
 \e${GRAY_COLOR}at \e${ORANGE_COLOR}\h \
 \e${GRAY_COLOR}in \e${GREEN_COLOR}\w\
-\e${GRAY_COLOR} $(vcprompt)\e${DEFAULT_COLOR}'
+\e${GRAY_COLOR} $(linbook_vcprompt)\e${DEFAULT_COLOR}'
 export PS1="${BASEPROMPT}
 $ "
-#export PS1='\e${USER_COLOR}\u\e${DEFAULT_COLOR}@\h:\w $(vcprompt)\$'
-#export PS1='\u@\h:\w $(vcprompt)\$'
 export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
@@ -114,7 +113,6 @@ fi
 
 #alias git=hub
 #alias rvim="gvim --remote-silent"
-
 
 . ~/tools/dotfiles/bash/git-completion.bash
 source ~/.ec2rc

@@ -1,5 +1,5 @@
 " Where shour vim look for plugins etc.
-set runtimepath=~/.vim,$VIMRUNTIME
+" set runtimepath=~/.vim,$VIMRUNTIME
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -296,3 +296,4 @@ let javascript_enable_domhtmlcss=1
 "
 let pymode_rope_vim_completion=1
 let pymode_rope_extended_complete=1
+let pymode_lint=0

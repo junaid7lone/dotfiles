@@ -37,3 +37,6 @@
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
+[submodule "bin/vcprompt"]
+	path = bin/vcprompt
+	url = git://github.com/djl/vcprompt.git
