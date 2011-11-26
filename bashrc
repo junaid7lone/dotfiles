@@ -1,10 +1,30 @@
-# Python path for Django Blog
-#PYTHONPATH=$PYTHONPATH:~/Projects/django/
-#export PYTHONPATH
-
 export PATH=$PATH:/home/owais/bin/texlive/2010/bin/x86_64-linux
+export PATH=/home/owais/lib/go_appengine:$PATH
 export GOROOT="/usr/lib/go"
 export GOPATH=$HOME/lib/go
+
+# To run local build of Unity
+function set-unity-local
+{
+    export PATH=/opt/unity/bin:${PATH}
+}
+
+function unset-unity-local
+{
+    export PATH=$(IFS=':';p=($PATH);unset IFS;p=(${p[@]%%*/opt/unity/*});IFS=':';echo "${p[*]}";unset IFS)
+}
+
+function set-unity-build-paths {
+    export PKG_CONFIG_PATH=/opt/unity/lib/pkgconfig:${PKG_CONFIG_PATH}
+    export LD_LIBRARY_PATH=/opt/unity/lib:${LD_LIBRARY_PATH}
+    export LD_RUN_PATH=/opt/unity/lib:${LD_RUN_PATH}
+}
+
+function unset-unity-build-paths {
+    unset PKG_CONFIG_PATH
+    unset LD_LIBRARY_PATH
+    unset LD_RUN_PATH
+}
 
 DEBEMAIL=hello@owaislone.org
 DEBFULLNAME="Owais Lone"
