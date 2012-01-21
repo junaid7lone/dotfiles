@@ -208,6 +208,7 @@ let python_highlight_all=1
 autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 " GoLang
+set rtp+=$GOROOT/misc/vim
 
 
 "VALA
@@ -297,3 +298,7 @@ let javascript_enable_domhtmlcss=1
 let pymode_rope_vim_completion=1
 let pymode_rope_extended_complete=1
 let pymode_lint=0
+
+" added by oh-my-zsh
+let g:ohmyvim="/usr/local/bin/oh-my-vim"
+:source /home/owais/.vim/ohmyvim/ohmyvim.vim

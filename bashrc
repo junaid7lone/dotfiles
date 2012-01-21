@@ -11,13 +11,13 @@ function set-unity-local
 
 function unset-unity-local
 {
-    export PATH=$(IFS=':';p=($PATH);unset IFS;p=(${p[@]%%*/opt/unity/*});IFS=':';echo "${p[*]}";unset IFS)
+    export PATH=$(IFS=':';p=($PATH);unset IFS;p=(${p[@]%%*/home/owais/staging/*});IFS=':';echo "${p[*]}";unset IFS)
 }
 
 function set-unity-build-paths {
-    export PKG_CONFIG_PATH=/opt/unity/lib/pkgconfig:${PKG_CONFIG_PATH}
-    export LD_LIBRARY_PATH=/opt/unity/lib:${LD_LIBRARY_PATH}
-    export LD_RUN_PATH=/opt/unity/lib:${LD_RUN_PATH}
+    export PKG_CONFIG_PATH=/home/owais/staging/lib/pkgconfig:${PKG_CONFIG_PATH}
+    export LD_LIBRARY_PATH=/home/owais/staging/lib:${LD_LIBRARY_PATH}
+    export LD_RUN_PATH=/home/owais/staging/lib:${LD_RUN_PATH}
 }
 
 function unset-unity-build-paths {

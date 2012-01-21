@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/owais/Dropbox/Private/dotfiles/.git'
-let g:netrw_dirhist_2='/home/owais/bin/touchegg-read-only/installation'
-let g:netrw_dirhist_3='/home/owais'
-let g:netrw_dirhist_4='/home/owais/bin/snakefire/snakefire'
-let g:netrw_dirhist_5='/home/owais/.config'
-let g:netrw_dirhist_6='/home/owais/.config/MonoDevelop'
-let g:netrw_dirhist_7='/home/owais/Projects/gmailwatcher/gmailwatcher-pck/debian/gmailwatcher'
-let g:netrw_dirhist_8='/etc/nginx/sites-available'
-let g:netrw_dirhist_9='/etc/uwsgi/apps-available'
+let g:netrw_dirhist_cnt =0
