@@ -1,6 +1,8 @@
 " Where shour vim look for plugins etc.
 " set runtimepath=~/.vim,$VIMRUNTIME
+set rtp+=$GOROOT/misc/vim
 
+call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -14,8 +16,6 @@ set guioptions-=T  "remove toolbar
 
 "Map Leader Key
 let mapleader = ","
-
-syntax on
 
 set t_Co=16
 set background=dark
@@ -43,9 +43,9 @@ set numberwidth=5
 set cb=unnamed
 
 "Enable filetype plugin
+syntax on
 filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 "set autochdir "Always switch to the current file directory 
 set mouse=a "User mouse everywhere
@@ -136,6 +136,8 @@ nmap <silent> <A-Right> :wincmd l<CR>
 " Tagbar
 let g:tagbar_usearrows = 1
 noremap <C-Right> <Esc>:TagbarToggle<CR>
+autocmd VimEnter * nested TagbarOpen
+
 
 " Easily source vimrc
 noremap <C-F12> :source ~/.vimrc<cr> 
@@ -208,7 +210,6 @@ let python_highlight_all=1
 autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 " GoLang
-set rtp+=$GOROOT/misc/vim
 
 
 "VALA
