@@ -60,7 +60,8 @@ set shiftround
 set ignorecase
 set smartcase
 set showmatch
-set showcmd 
+set showcmd
+set foldlevel=99 
 
 set autoindent
 set smartindent
