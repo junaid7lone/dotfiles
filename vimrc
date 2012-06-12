@@ -9,9 +9,10 @@ call pathogen#helptags()
 set enc=utf-8
 
 "GUI Font
-let &guifont="ubuntu mono 11"
+let &guifont="ubuntu mono 13"
 
 set guioptions-=T  "remove toolbar
+set guioptions+=m
 
 
 "Map Leader Key
@@ -210,6 +211,12 @@ autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
 let python_highlight_all=1
 autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
+let g:pyflakes_use_quickfix = 0
+
+let pymode_rope_vim_completion=1
+let pymode_rope_extended_complete=1
+let pymode_lint=0
+
 " GoLang
 
 
@@ -294,13 +301,3 @@ autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
 let javascript_enable_domhtmlcss=1
 
-
-"Python-Mode
-"
-let pymode_rope_vim_completion=1
-let pymode_rope_extended_complete=1
-let pymode_lint=0
-
-" added by oh-my-zsh
-let g:ohmyvim="/usr/local/bin/oh-my-vim"
-:source /home/owais/.vim/ohmyvim/ohmyvim.vim

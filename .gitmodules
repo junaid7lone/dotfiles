@@ -43,3 +43,30 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/coffee-script"]
+	path = vim/bundle/coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/surround"]
+	path = vim/bundle/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "sublime/packages/CodeIntel"]
+	path = sublime/packages/CodeIntel
+	url = git://github.com/Kronuz/SublimeCodeIntel.git
+[submodule "sublime/packages/Djaneiro"]
+	path = sublime/packages/Djaneiro
+	url = git://github.com/squ1b3r/Djaneiro.git
+[submodule "sublime/packages/Theme - Soda"]
+	path = sublime/packages/Theme - Soda
+	url = git://github.com/buymeasoda/soda-theme.git
+[submodule "sublime/packages/Linter"]
+	path = sublime/packages/Linter
+	url = git://github.com/SublimeLinter/SublimeLinter.git
+[submodule "sublime/packages/Sass"]
+	path = sublime/packages/Sass
+	url = git://github.com/nathos/sass-textmate-bundle.git
+[submodule "sublime/packages/CoffeeScript"]
+	path = sublime/packages/CoffeeScript
+	url = git://github.com/jashkenas/coffee-script-tmbundle.git
