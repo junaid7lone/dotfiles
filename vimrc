@@ -285,7 +285,7 @@ autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 " ---
 autocmd BufNewFile,BufRead *.rst setlocal ft=rst
 autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=79
-\ formatoptions+=nqt textwidth=74
+\ formatoptions+=nqt textwidth=79
 
 " markdown
 " ---
@@ -298,6 +298,6 @@ autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 
 " Javascript
 " ----------
-autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=4 softtabstop=4 colorcolumn=79
 let javascript_enable_domhtmlcss=1
 
