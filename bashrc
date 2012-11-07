@@ -1,30 +1,53 @@
 export PATH=$PATH:/home/owais/bin/texlive/2010/bin/x86_64-linux
+export PATH=${PATH}:/home/owais/bin/android/platform-tools
+export PATH=${PATH}:/home/owais/bin/android/tools
 export PATH=/home/owais/lib/go_appengine:$PATH
+export PATH=/home/owais/lib/go/bin:$PATH
 export GOROOT="/usr/lib/go"
-export GOPATH=$HOME/lib/go
+export GOPATH="/home/owais/lib/go"
+export PATH=$PATH:/var/lib/gems/1.8/bin
+export TERM=xterm-256color
 
+function selenium_ie9() 
+{
+    export SELENIUM_BROWSER="internet explorer"
+    export SELENIUM_BROWSER_VERSION=9
+    export SELENIUM_BROWSER_PLATFORM=WINDOWS
+    export REQUESTS_TIMEOUT=2
+}
 # To run local build of Unity
-function set-unity-local
+
+function recreate-build-dir()
 {
-    export PATH=/opt/unity/bin:${PATH}
+   rm -r build
+   mkdir build
+   cd build
 }
 
-function unset-unity-local
+function remake-autogen-project()
 {
-    export PATH=$(IFS=':';p=($PATH);unset IFS;p=(${p[@]%%*/home/owais/staging/*});IFS=':';echo "${p[*]}";unset IFS)
+    ./autogen.sh --prefix=$HOME/staging --enable-debug
+    make clean && make && make install
 }
 
-function set-unity-build-paths {
-    export PKG_CONFIG_PATH=/home/owais/staging/lib/pkgconfig:${PKG_CONFIG_PATH}
-    export LD_LIBRARY_PATH=/home/owais/staging/lib:${LD_LIBRARY_PATH}
-    export LD_RUN_PATH=/home/owais/staging/lib:${LD_RUN_PATH}
+function remake-unity()
+{
+    recreate-build-dir
+    cmake .. -DCMAKE_BUILD_TYPE=Debug -DCOMPIZ_PLUGIN_INSTALL_TYPE=local -DCMAKE_INSTALL_PREFIX=$HOME/staging/ -DGSETTINGS_LOCALINSTALL=ON
+    make  && make install
 }
 
-function unset-unity-build-paths {
-    unset PKG_CONFIG_PATH
-    unset LD_LIBRARY_PATH
-    unset LD_RUN_PATH
+function unity-env
+{
+ export PATH=~/staging/bin:$PATH
+ export XDG_DATA_DIRS=~/.config/compiz-1/gsettings/schemas:~/staging/share:/usr/share:/usr/local/share
+ export LD_LIBRARY_PATH=~/staging/lib:${LD_LIBRARY_PATH}
+ export LD_RUN_PATH=~/staging/lib:${LD_RUN_PATH}
+ export PKG_CONFIG_PATH=~/staging/lib/pkgconfig:${PKG_CONFIG_PATH}
+ export PYTHONPATH=~/staging/lib/python2.7/site-packages:$PYTHONPATH
 }
+
+# End unity build stuff
 
 DEBEMAIL=hello@owaislone.org
 DEBFULLNAME="Owais Lone"
@@ -45,7 +68,7 @@ shopt -s histappend
 PROMPT_COMMAND='history -a'
 
 # Set history file length.(See HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
+HISTSIZE=10000
 HISTFILESIZE=2000
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -136,3 +159,9 @@ fi
 
 . ~/tools/dotfiles/bash/git-completion.bash
 source ~/.ec2rc
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

@@ -18,6 +18,11 @@ set guioptions+=m
 "Map Leader Key
 let mapleader = ","
 
+"Enable filetype plugin
+syntax on
+filetype on
+filetype plugin indent on
+
 set t_Co=16
 set background=dark
 let g:solarized_termcolors=16
@@ -43,10 +48,6 @@ set numberwidth=5
 	"autoselect" to always put selected text on the clipboard
 set cb=unnamed
 
-"Enable filetype plugin
-syntax on
-filetype on
-filetype plugin indent on
 
 "set autochdir "Always switch to the current file directory 
 set mouse=a "User mouse everywhere
@@ -215,7 +216,10 @@ let g:pyflakes_use_quickfix = 0
 
 let pymode_rope_vim_completion=1
 let pymode_rope_extended_complete=1
-let pymode_lint=0
+let pymode_lint=1
+" Disable pylint checking every save
+" let g:pymode_lint_write = 0
+
 
 " GoLang
 
