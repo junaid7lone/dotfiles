@@ -105,8 +105,15 @@ inoremap <F2> <Esc>:w<cr>
 noremap <F2> :w<cr>
 
 " CommandT
-noremap <leader>T <Esc>:CommandTFlush<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR>
+"noremap <leader>T <Esc>:CommandTFlush<CR>
+"noremap <leader>m <Esc>:CommandTBuffer<CR>
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)|build|ve$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+
+  "\ 'link': 'some_bad_symbolic_links',
 
 " Buffers
 "noremap <C-Up> <Esc>:bnext<cr>
@@ -220,6 +227,8 @@ let pymode_lint=1
 " Disable pylint checking every save
 " let g:pymode_lint_write = 0
 
+"Ruby
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 colorcolumn=79
 
 " GoLang
 
