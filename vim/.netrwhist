@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/etc/udev/rules.d'
-let g:netrw_dirhist_2='/home/owais/.ec2/maw'
-let g:netrw_dirhist_3='/home/owais/Projects/seesr/seesr_rich/static-frontend/coffee'
-let g:netrw_dirhist_4='/home/owais/Projects/krome-photo/krome-photo/api/views'
-let g:netrw_dirhist_5='/home/owais/Projects/fogger/quickly_trunk/debian'
-let g:netrw_dirhist_6='/home/owais/Projects/seesr/seesrweb2/build'
-let g:netrw_dirhist_7='/home/owais/src/unity/trunk/build/plugins/unityshell/CMakeFiles'
-let g:netrw_dirhist_8='/home/owais/Projects/fogger/trunk/.bzr'
-let g:netrw_dirhist_9='/home/owais/Projects/temp/blog/config'
+let g:netrw_dirhist_cnt =0
