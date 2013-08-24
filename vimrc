@@ -1,7 +1,5 @@
 " Where shour vim look for plugins etc.
 " set runtimepath=~/.vim,$VIMRUNTIME
-set rtp+=$GOROOT/misc/vim
-
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
