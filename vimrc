@@ -225,7 +225,7 @@ let pymode_rope_vim_completion=1
 let pymode_rope_extended_complete=1
 let pymode_lint=1
 " Disable pylint checking every save
-" let g:pymode_lint_write = 0
+let g:pymode_lint_write = 0
 
 "Ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 colorcolumn=79
