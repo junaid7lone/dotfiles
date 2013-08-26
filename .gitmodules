@@ -70,12 +70,12 @@
 [submodule "fish/virtualfish"]
 	path = fish/virtualfish
 	url = git://github.com/adambrenecki/virtualfish.git
-[submodule "vim/bundle/sessions"]
-	path = vim/bundle/sessions
-	url = git://github.com/edsono/vim-sessions.git
 [submodule "vim/bundle/lightline"]
 	path = vim/bundle/lightline
 	url = https://github.com/itchyny/lightline.vim
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/bundle/tern_for_vim"]
+	path = vim/bundle/tern_for_vim
+	url = https://github.com/marijnh/tern_for_vim.git
