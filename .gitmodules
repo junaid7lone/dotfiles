@@ -19,9 +19,6 @@
 [submodule "vim/bundle/closetag"]
 	path = vim/bundle/closetag
 	url = git://github.com/docunext/closetag.vim.git
-[submodule "vim/bundle/session"]
-	path = vim/bundle/session
-	url = git://github.com/xolox/vim-session.git
 [submodule "vim/bundle/css_color"]
 	path = vim/bundle/css_color
 	url = https://github.com/vim-scripts/css_color.vim.git
