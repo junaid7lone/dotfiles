@@ -10,9 +10,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "vim/bundle/tagbar"]
-	path = vim/bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
 [submodule "vim/bundle/solarized"]
 	path = vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
@@ -79,3 +76,6 @@
 [submodule "vim/bundle/misc"]
 	path = vim/bundle/misc
 	url = git://github.com/xolox/vim-misc.git
+[submodule "fish/virtualfish"]
+	path = fish/virtualfish
+	url = git://github.com/adambrenecki/virtualfish.git
