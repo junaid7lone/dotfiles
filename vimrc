@@ -141,12 +141,6 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-" Tagbar
-let g:tagbar_usearrows = 1
-noremap <C-Right> <Esc>:TagbarToggle<CR>
-autocmd VimEnter * nested TagbarOpen
-
-
 " Easily source vimrc
 noremap <C-F12> :source ~/.vimrc<cr> 
 
