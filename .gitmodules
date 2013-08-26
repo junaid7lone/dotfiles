@@ -79,3 +79,6 @@
 [submodule "vim/bundle/tern_for_vim"]
 	path = vim/bundle/tern_for_vim
 	url = https://github.com/marijnh/tern_for_vim.git
+[submodule "vim/bundle/autosess"]
+	path = vim/bundle/autosess
+	url = https://github.com/powerman/vim-plugin-autosess.git
