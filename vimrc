@@ -12,7 +12,6 @@ let &guifont="ubuntu mono 13"
 set guioptions-=T  "remove toolbar
 set guioptions+=m
 
-
 "Map Leader Key
 let mapleader = ","
 
@@ -87,8 +86,7 @@ set incsearch
 set showmatch
 
 "Sessions
-let g:session_autoload=1
-let g:session_autosave=1
+let g:sessions_project_path = "$HOME/projects"
 
 set bsdir=current
 
