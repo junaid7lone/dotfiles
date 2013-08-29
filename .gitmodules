@@ -79,3 +79,6 @@
 [submodule "vim/bundle/autosess"]
 	path = vim/bundle/autosess
 	url = https://github.com/powerman/vim-plugin-autosess.git
+[submodule "vim/bundle/gocode"]
+	path = vim/bundle/gocode
+	url = https://github.com/Blackrush/vim-gocode.git
