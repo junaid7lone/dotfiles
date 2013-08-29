@@ -4,6 +4,14 @@ call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" Include golang goodies
+"filetype off
+"filetype plugin indent off
+"set runtimepath+=$GOROOT/misc/vim
+"filetype plugin indent on
+"syntax on
+
+
 set enc=utf-8
 
 "GUI Font
@@ -201,6 +209,8 @@ function! SummarizeTabs()
   endtry
 endfunction
 
+" Workarounds for using a shell other than bash like Fish
+set shell=/bin/bash
 
 " python support
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
@@ -219,8 +229,6 @@ let g:pymode_lint_write = 0
 
 "Ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 colorcolumn=79
-
-" GoLang
 
 
 "VALA
