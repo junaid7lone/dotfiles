@@ -11,7 +11,6 @@ call pathogen#helptags()
 "filetype plugin indent on
 "syntax on
 
-
 set enc=utf-8
 
 "GUI Font
