@@ -1,10 +1,8 @@
 export PATH=$PATH:/home/owais/bin/texlive/2010/bin/x86_64-linux
 export PATH=${PATH}:/home/owais/bin/android/platform-tools
 export PATH=${PATH}:/home/owais/bin/android/tools
-export PATH=/home/owais/lib/go_appengine:$PATH
-export PATH=/home/owais/lib/go/bin:$PATH
-export GOROOT="/usr/lib/go"
-export GOPATH="/home/owais/lib/go"
+export PATH=/home/owais/go/bin:$PATH
+export GOPATH="/home/owais/go"
 export PATH=$PATH:/var/lib/gems/1.8/bin
 export TERM=xterm-256color
 
