@@ -1,0 +1,7 @@
+function lock-package --description "Locks a deb package to the currently installed version"
+    echo $argv[1] hold | sudo dpkg --set-selections
+end
+
+function unlock-package --description "Un-locks a deb package to the currently installed version"
+    echo $argv[1] install | sudo dpkg --set-selections
+end
