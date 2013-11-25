@@ -94,6 +94,8 @@ set showmatch
 
 "Sessions
 let g:sessions_project_path = "$HOME/projects"
+let g:session_autosave = 'yes'
+let g:session_autoload = 'yes'
 
 set bsdir=current
 
