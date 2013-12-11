@@ -1,3 +1,4 @@
 set -gx GOROOT /usr/local/go
 set -gx GOPATH $HOME/go
-set -gx PATH $PATH "/usr/local/go/bin" $GOPATH/bin
+set -gx JAVA_HOME /usr/lib/jvm/java-7-oracle/
+set -gx PATH $PATH "/usr/local/go/bin;" $GOPATH/bin "/home/owais/Applications/android-studio/sdk/tools"
