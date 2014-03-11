@@ -5,3 +5,7 @@ end
 function unlock-package --description "Un-locks a deb package to the currently installed version"
     echo $argv[1] install | sudo dpkg --set-selections
 end
+
+function pyclean --description "Remove all .pyc files recursively"
+    find . -name '*.pyc' -delete
+end
