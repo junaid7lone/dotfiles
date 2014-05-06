@@ -1,5 +1,6 @@
 set -gx GOROOT /usr/local/go
 set -gx GOPATH $HOME/go
 set -gx JAVA_HOME /usr/lib/jvm/java-7-oracle/
-set -gx PATH $PATH "/usr/local/go/bin;" $GOPATH/bin "/home/owais/Applications/android-studio/sdk/tools"
+set -gx PATH $PATH "/usr/local/go/bin;" $GOPATH/bin "$HOME/Applications/android-studio/sdk/tools" "$HOME/.linuxbrew/bin"
+set -gx LD_LIBRARY_PATH $LD_LIBRARY_PATH "$HOME/.linuxbrew/lib"
 set -gx MOZILLA_FIVE_HOME /usr/lib/mozilla

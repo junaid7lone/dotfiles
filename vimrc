@@ -11,6 +11,9 @@ call pathogen#helptags()
 "filetype plugin indent on
 "syntax on
 
+" Stronger encription for password keyrings
+set cm=blowfish
+
 set enc=utf-8
 
 "GUI Font

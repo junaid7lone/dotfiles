@@ -9,3 +9,5 @@ end
 function pyclean --description "Remove all .pyc files recursively"
     find . -name '*.pyc' -delete
 end
+
+set -gx GIT_SSH gitssh
