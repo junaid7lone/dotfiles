@@ -88,3 +88,6 @@
 [submodule "vim/bundle/vim-session"]
 	path = vim/bundle/vim-session
 	url = https://github.com/xolox/vim-session.git
+[submodule "vim/bundle/isort"]
+	path = vim/bundle/isort
+	url = git@github.com:fisadev/vim-isort.git
