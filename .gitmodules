@@ -70,9 +70,6 @@
 [submodule "vim/bundle/gocode"]
 	path = vim/bundle/gocode
 	url = https://github.com/Blackrush/vim-gocode.git
-[submodule "vim/bundle/emment"]
-	path = vim/bundle/emment
-	url = https://github.com/vim-scripts/Emmet.vim.git
 [submodule "vim/bundle/vim-less"]
 	path = vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
