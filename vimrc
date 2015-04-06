@@ -231,18 +231,21 @@ autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 s
 let g:pyflakes_use_quickfix = 1
 
 let pymode_rope_vim_completion=1
-let pymode_rope_extended_complete=1
+"let pymode_rope_extended_complete=1
 let pymode_lint=1
 let g:pymode_doc = 0
 let g:pymode_virtualenv = 1
 let g:pymode_rope_completion = 1
-let g:pymode_rope_complete_on_dot = 1
+"let g:pymode_rope_complete_on_dot = 1
 let g:pymode_rope_autoimport = 1
-let g:pymode_rope_autoimport_import_after_complete = 1
+"let g:pymode_rope_autoimport_import_after_complete = 1
 " Disable pylint checking every save
 let g:pymode_lint_write = 0
 let g:vim_isort_map = '<C-i>'
 set completeopt=menu
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
 
 "Ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 colorcolumn=79
