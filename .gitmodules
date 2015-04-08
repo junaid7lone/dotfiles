@@ -91,3 +91,6 @@
 [submodule "oh-my-fish-plugins/autojump"]
 	path = oh-my-fish-plugins/autojump
 	url = git://github.com/joelthelion/autojump.git
+[submodule "bin/vcprompt"]
+	path = bin/vcprompt
+	url = git@github.com:maverickwoo/vcprompt.git
