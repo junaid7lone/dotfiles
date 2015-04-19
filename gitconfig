@@ -1,9 +1,10 @@
 [user]
-    name = Owais Lone
-    email = hello@owaislone.org
+    name = Juniad Lone
+    email = junaid7lone@gmail.com
 
 [alias]
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  up = pull --ff-only --all -p
 
 [color "branch"]
   current = yellow reverse
