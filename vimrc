@@ -41,6 +41,11 @@ if has("gui_running")
     colorscheme solarized
 endif
 
+" Use Ag over Grep
+set grepprg=ag\ --nogroup\ --nocolor
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
 " Die Vi, die; Long live Vim
 set nocompatible
 
@@ -213,6 +218,11 @@ function! SummarizeTabs()
   endtry
 endfunction
 
+" YCM
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
 " Workarounds for using a shell other than bash like Fish
 set shell=/bin/bash
 
@@ -223,13 +233,24 @@ autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
 let python_highlight_all=1
 autocmd FileType pyrex setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
-let g:pyflakes_use_quickfix = 0
+let g:pyflakes_use_quickfix = 1
 
 let pymode_rope_vim_completion=1
-let pymode_rope_extended_complete=1
+"let pymode_rope_extended_complete=1
 let pymode_lint=1
+let g:pymode_doc = 0
+let g:pymode_virtualenv = 1
+let g:pymode_rope_completion = 1
+"let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_autoimport = 1
+"let g:pymode_rope_autoimport_import_after_complete = 1
 " Disable pylint checking every save
 let g:pymode_lint_write = 0
+let g:vim_isort_map = '<C-i>'
+set completeopt=menu
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
 
 "Ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 colorcolumn=79
